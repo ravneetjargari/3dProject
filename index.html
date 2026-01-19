@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxe Scroll 3D</title>
+  </head>
+  <body id="top">
+    <!-- Persistent WebGL canvas -->
+         <!-- Custom cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-ring"></div>
+      <div class="cursor-label" id="cursorLabel"></div>
+    </div>
+
+    <!-- Case study overlay -->
+    <div class="case-overlay" id="caseOverlay" aria-hidden="true">
+      <div class="case-bg" id="caseBg"></div>
+      <div class="case-inner">
+        <div class="case-top">
+          <div class="case-title" id="caseTitle">Project</div>
+          <button class="case-close" id="caseClose" aria-label="Close">Close</button>
+        </div>
+        <div class="case-body">
+          <p class="case-desc" id="caseDesc">
+            Placeholder case study — this transition + scroll choreography is the point.
+          </p>
+
+          <div class="case-metrics">
+            <div class="metric"><span>Role</span><b>Creative Dev</b></div>
+            <div class="metric"><span>Stack</span><b>Three.js · GSAP · Shaders</b></div>
+            <div class="metric"><span>Focus</span><b>Motion · Performance</b></div>
+          </div>
+
+          <div class="case-actions">
+            <button class="btn" id="caseCta">Request a build like this</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="gl"></canvas>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-top">
+          <div class="brand">AUSPICIOUS / LAB</div>
+          <div class="pct" id="pct">0%</div>
+        </div>
+        <div class="bar">
+          <div class="bar-fill" id="bar"></div>
+        </div>
+        <div class="hint">Loading assets & warming shaders</div>
+      </div>
+    </div>
+
+    <!-- UI overlay -->
+    <header class="topbar">
+      <div class="logo">Auspicious</div>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <button class="btn" id="cta">Start a Project</button>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="panel hero" data-panel="0">
+        <div class="container">
+          <p class="eyebrow">Realtime / Motion / WebGL</p>
+          <h1 class="headline">
+            High-end interactive experiences.
+            <span class="muted">Built to perform.</span>
+          </h1>
+          <p class="sub">
+            This is a capabilities demo — scroll to drive the camera, lighting, and material feel.
+          </p>
+          <div class="row">
+            <a class="link" href="#work">Explore Work</a>
+            <span class="dot"></span>
+            <span class="meta">Three.js • GSAP • Scroll Cinema</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel work" id="work" data-panel="1">
+        <div class="container">
+          <h2 class="section-title">Selected Work</h2>
+          <div class="grid">
+            <article class="card" data-case="Aurora" data-desc="Scroll-driven product story with cinematic WebGL transitions.">
+              <h3>Aurora</h3>
+              <p>Scroll-driven product story with cinematic transitions.</p>
+              <span class="tag">WebGL / Shaders</span>
+            </article>
+            <article class="card" data-case="Atlas" data-desc="Realtime scene orchestration with performance budgets and scroll chapters.">
+              <h3>Atlas</h3>
+              <p>Realtime scene orchestration with performance budgets.</p>
+              <span class="tag">3D / Post</span>
+            </article>
+            <article class="card" data-case="Kairo" data-desc="Typography + motion system with magnetic UI and shader-driven material.">
+              <h3>Kairo</h3>
+              <p>Type + motion system with interactive micro-physics.</p>
+              <span class="tag">Motion / UI</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel chapter" data-panel="2">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Chapter I</p>
+            <h2 class="section-title">Camera as narrative.</h2>
+            <p class="sub">
+              Scroll controls a continuous 3D scene. No hard cuts — just choreography.
+            </p>
+          </div>
+          <ul class="bullets">
+            <li>Persistent canvas</li>
+            <li>Pinned sections</li>
+            <li>Ease + inertia</li>
+            <li>Mobile-aware</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel chapter" data-panel="3">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Chapter II</p>
+            <h2 class="section-title">Material + light feel premium.</h2>
+            <p class="sub">
+              A subtle “glass / metal” response and lighting shift sells the illusion.
+            </p>
+          </div>
+          <ul class="bullets">
+            <li>Specular highlights</li>
+            <li>Fresnel rim</li>
+            <li>Controlled bloom vibe (lightweight)</li>
+            <li>Reduced-motion fallback</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel about" id="about" data-panel="4">
+        <div class="container">
+          <h2 class="section-title">About</h2>
+          <p class="sub">
+            Built as a forward-looking demo to show ability: WebGL systems, motion design,
+            performance thinking, and polish.
+          </p>
+          <div class="footer-row">
+            <span class="meta">© Auspicious Lab</span>
+            <a class="link" href="#top">Back to top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- IMPORTANT: This must point to /src/main.js -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
